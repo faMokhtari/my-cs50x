@@ -39,7 +39,7 @@ This module contains helper functions used by app.py. The apology function rende
 ## Usage
 
     Install the required packages using pip install -r requirements.txt.
-    Run the application by executing python app.py or flask run.
+    Run the application by executing flask run.
     Open your web browser and navigate to http://localhost:5000 to access Media Manager.
 
 ## Features
