@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+
+    <body class="light_green">
+        <div class="bg_index .bg-info.bg-gradient">
+            <h1 class="index_h1">Media Manager</h1>
+        </div>
+        <br>
+        <strong>
+            <p>Media Manager is a web application that helps you organize your favorite books, movies and TV shows.<br>It also helps you make a list of the media you plan to consume later.</p>
+        </strong>
+        <br>
+
+        <div class="row justify-content-center">
+            <div class="col-sm-4 container d-flex justify-content-center">
+                <div class="card greenish">
+                    <div class="card-body">
+                        <h5 class="card-title">Organize your books📚</h5>
+                        <p class="card-text">Make lists of your favorite books and the books you're going to read in the future.</p>
+                        <a href="/books" class="btn pink">Let's Go</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 container d-flex justify-content-center">
+                <div class="card greenish">
+                    <div class="card-body">
+                        <h5 class="card-title">Organize your movies🎬</h5>
+                        <p class="card-text">Make lists of your favorite movies & TV shows and what you're going to watch in the future</p>
+                        <a href="/movies" class="btn pink">Let's Go</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+{% endblock %}

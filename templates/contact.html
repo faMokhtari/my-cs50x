@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+<link href="/static/styles.css" rel="stylesheet">
+
+{% block title %}
+    Books
+{% endblock %}
+
+
+{% block main %}
+
+    <body class="light_green">
+        <div class="bg_contact .bg-info.bg-gradient">
+            <h1>Contact Me!</h1>
+        </div>
+        <br>
+        <p>Feel free to send me a message!</p>
+
+        <form action="/contact" method="post">
+            <input autocomplete="off" autofocus type="email" id="email" name="email" placeholder="Email address" required>
+            <br><br>
+            <textarea id="message" name="message" maxlength="200" placeholder="Message (up to 200 characters)" required></textarea>
+            <br>
+            <button class="btn pink" type="submit">Submit</button>
+        </form>
+    </body>
+{% endblock %}

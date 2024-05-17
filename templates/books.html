@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+<link href="/static/styles.css" rel="stylesheet">
+
+{% block title %}
+    Books
+{% endblock %}
+{% block main %}
+
+    <body class="light_green">
+        <div class="bg_books .bg-info.bg-gradient">
+            <h1>Books</h1>
+        </div>
+        <br>
+        <p>Here you can make a list of your favorite book, as well as a list of your future reads!</p>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <form action="/books" method="post">
+                        <div class="mb-3">
+                            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="favorite_book" name="favorite_book" placeholder="Your Favorite book" type="text">
+                        </div>
+                        <button class="btn btn-warning" type="submit">Add Favorite Book</button>
+                    </form>
+                    <br>
+                </div>
+                <div class="col">
+                    <form action="/future_books" method="post">
+                        <div class="mb-3">
+                            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="future_book" name="future_book" placeholder="Your Future Read" type="text">
+                        </div>
+                        <button class="btn btn-success" type="submit">Add Future Read</button>
+                    </form>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex justify-content-center">
+                    <table class="table table-warning table-hover">
+                        <thead>
+                            <th>Favorite Books</th>
+                            <th>Action</th>
+                        </thead>
+                        <tbody>
+                            {% for favorite_book in favorite_books %}
+                                <tr>
+                                    <td class="align-middle">{{ favorite_book["title"] }}</td>
+                                    <td class="align-middle">
+                                        <form action="/remove_favorite_book" method="post">
+                                            <input name="id" type="hidden" value="{{ favorite_book['id'] }}">
+                                            <button type="submit">Remove</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col d-flex justify-content-center">
+                    <table class="table table-success table-hover">
+                        <thead>
+                            <th>Future Reads</th>
+                            <th>Action</th>
+                        </thead>
+                        <tbody>
+                            {% for future_book in future_books %}
+                                <tr>
+                                    <td class="align-middle">{{ future_book["title"] }}</td>
+                                    <td class="align-middle">
+                                        <form action="/remove_future_book" method="post">
+                                            <input name="id" type="hidden" value="{{ future_book['id'] }}">
+                                            <button type="submit">Remove</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+{% endblock %}

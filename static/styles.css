@@ -1,0 +1,102 @@
+h1 {
+    font-size: xxx-large;
+    color: white;
+}
+
+nav .navbar-brand {
+    font-size: xx-large;
+}
+
+.content {
+    background: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%);
+}
+
+
+nav .navbar-brand .red {
+    color: #f76b8a;
+    font-weight: 900;
+    text-shadow: 1px 1px white;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+.bg_register {
+    background-image: url('register.jpg');
+
+}
+
+.bg_contact {
+    background-image: url('contact.jpg');
+}
+
+.bg_books {
+    /* The image used */
+    background-image: url('books.jpg');
+}
+
+.bg_movies {
+    /* The image used */
+    background-image: url('movies.jpg');
+}
+
+.bg_index {
+    background-image: url('organize.jpg');
+}
+
+
+.bg_books,
+.bg_movies,
+.bg_contact,
+.bg_index,
+.bg_register {
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding: 70px;
+}
+
+textarea {
+    height: 200px;
+    width: 400px;
+}
+
+:root {
+    --bs-gutter-x: 0.5rem;
+    /* Adjust the left and right padding */
+}
+
+.container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: var(--bs-gutter-x);
+    padding-left: var(--bs-gutter-x);
+}
+
+.greenish {
+    background: #66bfbf;
+}
+
+.light_green {
+    background: #eaf6f6;
+}
+
+.whitish {
+    background: #fcfefe;
+}
+
+.pink {
+    background: #f76b8a;
+}
+
+.index_h1 {
+    color: #f76b8a;
+    text-shadow: 1px 1px white;
+}
